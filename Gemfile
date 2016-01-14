@@ -34,8 +34,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
-  gem 'debugger'
+  gem 'byebug'
 end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
