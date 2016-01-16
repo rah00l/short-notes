@@ -12,12 +12,21 @@ ActiveAdmin.register Post do
 #   permitted
 # end
 
+  index do
+    column :title
+    column :publish
+    column :updated_at
+    column :created_at
+    actions
+  end
+
   form do |f|
-    f.inputs "Activity Details" do       
+    f.inputs "Activity Details" do
       f.input :title
       f.input :content, as: :html_editor
       f.input :publish, as: :boolean,
-        required: false, label: 'Check this box to allow publish this post'
+                        required: false,
+                        label: 'Check this box to allow publish this post'
     end
     f.actions
   end
