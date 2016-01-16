@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<div class="clear"></div>
+<div class="site-main cf" id="main">
+	<div class="content-area grid_4 " id="primary">
+		<div class="site-content papr cf" id="content" role="main">
+			<div class="mainsec section" id="mainsec">
+				<div class="widget Blog" id="Blog1">
+						<div class="blog-posts hfeed">
+							<div class="date-outer">
+							<h2 class="date-header">
+								<span>Thursday, January 31, 2013</span>
+							</h2>
+								<div class="date-posts">
+									<%= render @posts %>
+								</div>
+							</div>
+						</div>
+					<div style="clear: both;"></div>
+					<div class="blog-pager" id="blog-pager">
+						<a class="home-link" href="">Home</a>
+					</div>
+					<div class="clear"></div>
+					<div class="blog-feeds">
+						<div class="feed-links">
+						Subscribe to:
+						<a class="feed-link" href="" target="_blank" type="application/atom+xml">Posts (Atom)</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- #content .site-content -->
+	</div><!-- #primary .content-area -->
+<%= render 'sidebar' %>
+</div><!-- #main .site-main -->
