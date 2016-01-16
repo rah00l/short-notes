@@ -33,7 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
-gem 'active_admin_editor'
+gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop
