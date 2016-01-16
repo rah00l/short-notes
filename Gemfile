@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.2.1'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use mysql2 as the database for Active Record
@@ -32,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
+gem 'active_admin_editor'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop
