@@ -7,7 +7,13 @@
             <li id="currentpage"><a href="https://short-notes.herokuapp.com/">Home</a></li>
             <li><a href="https://short-notes.herokuapp.com/">About</a></li>
             <li><a href="https://short-notes.herokuapp.com/">Contact</a></li>
+        <% if user_signed_in? %>
+            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+        <%# else %>
+            <!--         <li><%#= link_to "Sign Up", new_user_registration_path %></li>
+                    <li><%#= link_to "Sign In", new_user_session_path %></li>  -->
           </ul>
+         <% end %>
           <div class="clear"></div>
           <!-- <span class="widget-item-control">
             <span class="item-control blog-admin">
