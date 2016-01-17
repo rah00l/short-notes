@@ -15,6 +15,7 @@ ActiveAdmin.register Post do
   index do
     column :title
     column :publish
+    column :published_at
     column :updated_at
     column :created_at
     actions
@@ -27,6 +28,7 @@ ActiveAdmin.register Post do
       f.input :publish, as: :boolean,
                         required: false,
                         label: 'Check this box to allow publish this post'
+      f.input :published_at, as: :datepicker
       f.input :category_id, as: :select, collection: Category.all.map{|cat| [cat.name, cat.id]}
     end
     f.actions
