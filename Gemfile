@@ -31,10 +31,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# For adding authentication system
 gem 'devise'
+# For adding administrator/stron back-end functionality
 gem 'activeadmin', github: 'activeadmin'
+# A custom formtastic input called :html_editor to build out a wysihtml5 enabled input
 gem 'active_admin_editor', github: 'boontdustie/active_admin_editor'
-
+# gem provides a simple and extremely flexible way to upload files
+gem 'carrierwave'
+# CarrierWave comes with a small library to make manipulating images with RMagick easie
+gem 'rmagick'
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop
   # execution and get a debugger console
