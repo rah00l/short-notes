@@ -15,6 +15,8 @@ ActiveAdmin.register Post do
   index do
     column :title
     column :publish
+    column :category
+    column :user
     column :published_at
     column :updated_at
     column :created_at
