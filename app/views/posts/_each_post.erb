@@ -7,9 +7,9 @@
         <h2 class="post-title entry-title">
           <%= post.title %>
         </h2>
-        <div class="entry-meta">
-          Posted on <time class="entry-date">12:20 PM</time><span> by <span class="author vcard">BTemplates</span></span> with <a href="http://newspress2-btemplates.blogspot.in/2013/01/lorem-ipsum_4296.html#comment-form" onclick="">2 comments</a>
-        </div>
+          <div class="entry-meta">
+            Posted on <time class="entry-date"><%= post.created_at.strftime("%B %d,%Y")%></time><span> by <span class="author vcard"><%= post.user.try(:email) %></span></span> with <a href="http://newspress2-btemplates.blogspot.in/2013/01/lorem-ipsum_4296.html#comment-form" onclick="">2 comments</a>
+          </div>
       </header>
       <div class="post-header-line-1"></div>
       <div class="post-body entry-summary entry">

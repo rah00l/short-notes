@@ -30,6 +30,7 @@ ActiveAdmin.register Post do
                         label: 'Check this box to allow publish this post'
       f.input :published_at, as: :datepicker
       f.input :category_id, as: :select, collection: Category.all.map{|cat| [cat.name, cat.id]}
+      f.input :user_id, as: :select, collection: User.all.map{|usr| [usr.email, usr.id]}
     end
     f.actions
   end
