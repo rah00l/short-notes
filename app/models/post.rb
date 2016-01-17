@@ -6,4 +6,7 @@ class Post < ActiveRecord::Base
   # Validation
   validates :title, presence: true, uniqueness: true
   validates :content, presence: true
+
+  # mount the uploader
+  mount_uploader :image, ImageUploader
 end
