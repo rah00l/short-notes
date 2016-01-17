@@ -1,4 +1,30 @@
 <p id="notice"><%= notice %></p>
-<%= render 'each_post', post: @post %>
-<%#= link_to 'Edit', edit_post_path(@post) %> |
-<%#= link_to 'Back', posts_path %>
+<div class="clear"></div>
+<div class="site-main cf" id="main">
+<div class="content-area grid_4 " id="primary">
+  <div class="site-content papr cf" id="content" role="main">
+    <div class="mainsec section" id="mainsec"><div class="widget Blog" id="Blog1">
+      <div class="blog-posts hfeed">
+
+        <div class="date-outer">
+
+          <h2 class="date-header"><span>Thursday, January 31, 2013</span></h2>
+
+          <div class="date-posts">
+            <%= render 'each_post', post: @post %>
+          </div>
+            </div>
+          </div>
+          <div style="clear: both;"></div>
+          <div class="post-feeds">
+            <div class="feed-links">
+              Subscribe to:
+              <a class="feed-link" href="http://newspress2-btemplates.blogspot.com/feeds/6594048573928370354/comments/default" target="_blank" type="application/atom+xml">Post Comments (Atom)</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div><!-- #content .site-content -->
+    </div><!-- #primary .content-area -->
+    <%= render 'sidebar' %>
+</div><!-- #main .site-main -->
