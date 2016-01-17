@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160117194013) do
+ActiveRecord::Schema.define(version: 20160117221433) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20160117194013) do
     t.datetime "updated_at",                 null: false
     t.integer  "category_id",  limit: 4
     t.datetime "published_at"
+    t.string   "image",        limit: 255
   end
 
   add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
