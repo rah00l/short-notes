@@ -2,7 +2,7 @@ ActiveAdmin.register Post do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :title, :content, :user_id, :publish
+  permit_params :title, :content, :user_id, :publish,:published_at, :category_id
 #
 # or
 #
@@ -27,6 +27,7 @@ ActiveAdmin.register Post do
       f.input :publish, as: :boolean,
                         required: false,
                         label: 'Check this box to allow publish this post'
+      f.input :category_id, as: :select, collection: Category.all.map{|cat| [cat.name, cat.id]}
     end
     f.actions
   end
