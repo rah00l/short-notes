@@ -2,7 +2,7 @@ ActiveAdmin.register Post do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :title, :content, :user_id, :publish,:published_at, :category_id
+  permit_params :title, :content, :user_id, :publish,:published_at, :category_id, :image
 #
 # or
 #
@@ -16,6 +16,7 @@ ActiveAdmin.register Post do
     column :title
     column :publish
     column :category
+    column :image
     column :user
     column :published_at
     column :updated_at
@@ -27,12 +28,13 @@ ActiveAdmin.register Post do
     f.inputs "Activity Details" do
       f.input :title
       f.input :content, as: :html_editor
+      f.input :image, as: :file
+      f.input :category_id, as: :select, collection: Category.all.map{|cat| [cat.name, cat.id]}
+      f.input :user_id, as: :select, collection: User.all.map{|usr| [usr.email, usr.id]}
       f.input :publish, as: :boolean,
                         required: false,
                         label: 'Check this box to allow publish this post'
       f.input :published_at, as: :datepicker
-      f.input :category_id, as: :select, collection: Category.all.map{|cat| [cat.name, cat.id]}
-      f.input :user_id, as: :select, collection: User.all.map{|usr| [usr.email, usr.id]}
     end
     f.actions
   end
