@@ -2,7 +2,7 @@
   <div class="sidebar">
     <div class="sidebartop section" id="sidebartop">
     
-    <%= render 'popular_posts'%>
+    <%= render 'recent_posts', post: Post.last %>
     
     <%= render 'blogger_template'%>
 
