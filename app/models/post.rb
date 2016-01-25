@@ -9,4 +9,7 @@ class Post < ActiveRecord::Base
 
   # mount the uploader
   mount_uploader :image, ImageUploader
+
+  #for order default scope
+  default_scope { order(created_at: :desc) }
 end
