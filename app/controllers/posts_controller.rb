@@ -13,6 +13,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @image_name = params[:image_name].gsub! 'small', 'medium'
   end
 
   # GET /posts/new
