@@ -65,6 +65,15 @@ class PostsController < ApplicationController
     end
   end
 
+  # RECENT_POST /recent_posts/1
+  # For having flash of recent-posts
+  def recent_posts
+    @recent_posts = Post.offset(rand(Post.count)).first
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
