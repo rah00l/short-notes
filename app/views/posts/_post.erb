@@ -3,12 +3,14 @@
     <article class="post hentry">
       <a name="6594048573928370354"></a>
       <div id="summary26594048573928370354" class='left'>
-        <%= image_tag post.image.url(:small) %>
+        <%#= image_tag post.image.url(:small) %>
+        <% small_image = pick_image_name('small')%>
+        <%= image_tag(small_image) %>
       </div>
       <div class="cover">
         <header class="entry-header">
           <h2 class="post-title entry-title">
-            <%= link_to post.title, post %>
+            <%= link_to post.title, post_path(id: post.id,  image_name: small_image) %>
           </h2>
           <div class="entry-meta">
             Posted on <time class="entry-date"><%= post.created_at.strftime("%B %d,%Y")%></time><span> by <span class="author vcard"><%= post.user.try(:email) %></span></span> with <a href="http://newspress2-btemplates.blogspot.in/2013/01/lorem-ipsum_4296.html#comment-form" onclick="">2 comments</a>
@@ -24,7 +26,7 @@
           This entry was posted in : <a href="http://newspress2-btemplates.blogspot.in/search/label/Lorem%201" rel="tag">Lorem 1</a>, <a href="http://newspress2-btemplates.blogspot.in/search/label/Lorem%202" rel="tag">Lorem 2</a>, <a href="http://newspress2-btemplates.blogspot.in/search/label/Lorem%203" rel="tag">Lorem 3</a>
         </footer>
         <div style="float:right;padding-right:10px;margin-top:10px;">
-          <%= link_to 'Read More', post, class: 'morer' %>
+          <%= link_to 'Read More', post_path(id: post.id,  image_name: small_image), class: 'morer' %>
         </div>
       </div>
       <div class="post-footer">
