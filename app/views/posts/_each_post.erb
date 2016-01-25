@@ -15,7 +15,7 @@
       <div class="post-body entry-summary entry">
         <p>
         <%#= image_tag("Antartic-by-Peter-Rejcek_002.jpg", border: '0', height: '332', width: '500') %>
-        <%= image_tag post.image.url(:medium) %>
+        <%= image_tag @image_name %>
         </p>
         <%= raw post.content %>
         <div style="clear:both;"></div>

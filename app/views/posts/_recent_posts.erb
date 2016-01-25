@@ -8,7 +8,8 @@
       <!-- <a href="http://newspress2-btemplates.blogspot.in/2013/01/lorem-ipsum_4296.html" target="_blank">
         <img alt="" src="Newspress_files/Antartic-by-Peter-Rejcek.jpg" border="0" height="72" width="72">
       </a> -->
-      <%= image_tag post.image.url(:thumb) %>
+      <%#= image_tag post.image.url(:thumb) %>
+      <%= image_tag(pick_image_name('thumb')) %>
     </div>
     <div class="item-title"><%= post.title %></div>
     <div class="item-snippet"><%= raw strip_tags truncate(post.content, length: 55) %></div>
