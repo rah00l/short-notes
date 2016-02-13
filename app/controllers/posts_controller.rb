@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user! ,:except => [:index, :show, :recent_posts, :subscribe_user]
-  before_action :authenticate_user! ,:except => [:index, :show, :recent_posts]
   before_action :categories_list ,:only => [:index, :show]
 
   # GET /posts
