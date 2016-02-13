@@ -51,10 +51,11 @@
     </div>
   </div> -->
   <div class="cf paprh" id="flashn">
-    <h3>Flash news:</h3>
-    <div style="display: block; position: relative; height: 38px; overflow: hidden;" id="ticker">
+  <%= render 'shared/flash_messages' if !flash.empty? %>
+    <!-- <h3>Flash news:</h3> -->
+    <!-- <div style="display: block; position: relative; height: 38px; overflow: hidden;" id="ticker">
       <ul style="position: absolute; margin: 0px; top: 0px;">
         <li style="margin: 0px; display: list-item;"><a style="margin: 0px;" href="">NEWS-5-TITLE-HERE</a></li><li style="margin: 0px; display: list-item;"><a style="margin: 0px;" href="">NEWS-1-TITLE-HERE</a></li><li style="margin: 0px; display: list-item;"><a style="margin: 0px;" href="">NEWS-2-TITLE-HERE</a></li><li style="margin: 0px; display: list-item;"><a style="margin: 0px;" href="">NEWS-3-TITLE-HERE</a></li><li style="margin: 0px; display: list-item;"><a style="margin: 0px;" href="">NEWS-4-TITLE-HERE</a></li></ul>
-      </div>
+      </div> -->
     </div>
   </div>

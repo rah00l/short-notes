@@ -5,3 +5,22 @@
 .margin-right-10px{
 	margin-right: 10px;
 }
+
+.error {
+    border: solid 1px #900;
+    background-color: #FF6565;
+  }
+
+.notice {
+    border: solid 1px #26722D;
+    background-color: #A4E7A0;
+  }
+
+.flash {
+    color: black;
+    z-index: 0;
+    position: fixed;
+    font-weight: bold;
+    width: 69%;
+    margin: 1px;
+}
