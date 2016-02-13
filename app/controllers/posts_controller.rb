@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user! ,:except => [:index, :show, :recent_posts, :subscribe_user]
   before_action :authenticate_user! ,:except => [:index, :show, :recent_posts]
   before_action :categories_list ,:only => [:index, :show]
 
@@ -72,6 +73,18 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  # SUBSCRIBE_USER /subscribe_user
+  def subscribe_user
+    sub = Subscribe.create email: params[:email] if params[:email].present?
+    if sub.save
+      PostMailer.user_subscribe(sub.email).deliver_now
+      flash[:notice] = 'Thank you, your request was successful! Please check your e-mail inbox.'
+    else
+      flash[:error] = sub.errors.full_messages.last
+    end
+    redirect_to :back
   end
 
   private

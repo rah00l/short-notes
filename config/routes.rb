@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :posts do
     collection do
       get 'recent_posts'
+      post 'subscribe_user'
     end
   end
 
