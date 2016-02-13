@@ -79,7 +79,7 @@ class PostsController < ApplicationController
     sub = Subscribe.create email: params[:email] if params[:email].present?
     if sub.save
       PostMailer.user_subscribe(sub.email).deliver_now
-      flash[:notice] = 'Thank you, your request was successful! Please check your e-mail inbox.'
+      flash[:notice] = 'Success! You are subscribed.'
     else
       flash[:error] = sub.errors.full_messages.last
     end
