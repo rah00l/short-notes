@@ -1,0 +1,18 @@
+<h3>
+  Notification Of New Post Created <br />
+  ------------------------------------------
+</h3>
+<p>
+	<%= @post.title %>
+</p>
+<div>
+	<%= raw strip_tags truncate(@post.content, length: 180) %>
+</div>
+
+Can have more details:
+<p>
+  <strong>URL: </strong>
+  <a href="https://short-notes.herokuapp.com/">
+	Click Here!
+  </a>
+</p>

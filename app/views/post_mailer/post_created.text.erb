@@ -1,1 +1,10 @@
-<% @post.title %>
+  Notification Of New Post Created
+  ------------------------------------------
+
+  <%= @post.title %>
+
+  <%= raw strip_tags truncate(@post.content, length: 180) %>
+
+  Can have more details:
+
+  (Click Here!) https://short-notes.herokuapp.com/
